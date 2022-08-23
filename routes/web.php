@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// admin
+Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
+    Route::get('/', [App\Http\Controllers\AdminController::class, 'adminpage'])->name('adminpage');
+});
+
+// user
 Route::get('/', function () {
     return view('home');
 });
 
+
+
+
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
 
 require __DIR__.'/auth.php';
 
@@ -27,6 +42,3 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
