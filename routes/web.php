@@ -23,6 +23,8 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::get('/peserta/{id}', [App\Http\Controllers\PesertaController::class, 'show'])->name('peserta.show');
     Route::get('/peserta/edit/{id}', [App\Http\Controllers\PesertaController::class, 'edit'])->name('peserta.edit');
     Route::post('/peserta/update/{id}', [App\Http\Controllers\PesertaController::class, 'update'])->name('peserta.update');
+    Route::delete('/peserta/delete/{id}', [App\Http\Controllers\PesertaController::class, 'delete'])->name('peserta.delete');
+
 });
 
 // already login

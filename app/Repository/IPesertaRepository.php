@@ -13,6 +13,8 @@ interface IPesertaRepository{
     public function editPeserta($id);
 
     public function updatePeserta($id, array $data);
+
+    public function deletePeserta($id);
 }
 
 

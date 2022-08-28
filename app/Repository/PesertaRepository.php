@@ -42,6 +42,10 @@ class PesertaRepository implements IPesertaRepository{
         ]);
     }
 
+    public function deletePeserta($id){
+        return Peserta::find($id)->delete();
+    }
+
 
 }
 

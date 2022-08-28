@@ -84,4 +84,9 @@ class PesertaController extends Controller
         return redirect('/admin');
     }
 
+    public function delete($id){
+        $this->peserta->deletePeserta($id);
+        return redirect('/admin');
+    }
+
 }

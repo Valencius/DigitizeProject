@@ -21,10 +21,16 @@
                   <hr>
                   <p class="card-text">{{ $peserta->desc}} </p>
                   <a href="{{ route('peserta.show',$peserta->id) }}" class="btn btn-primary">View Detail</a>
+                  <form action="{{ route('peserta.delete', $peserta->id)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
                 </div>
               </div>
             @endforeach
         </div>
+        <a href="{{ route('peserta.create') }}" class="btn btn-primary">Create Peserta</a>
     </div>
 </div>
 
