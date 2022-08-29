@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 
 class PesertaController extends Controller
 {
+
+    public $user;
     public $peserta;
-    public function __construct(IPesertaRepository $peserta)
+    public function __construct(IPesertaRepository $peserta, IPesertaRepository $user)
     {
         $this->peserta = $peserta;
+        $this->user = $user;
     }
 
     public function index(){
@@ -87,6 +90,36 @@ class PesertaController extends Controller
     public function delete($id){
         $this->peserta->deletePeserta($id);
         return redirect('/admin');
+    }
+
+    public function voteDrawing(Request $request, $id){
+        
+        $data = $request->all();
+        
+        $this->user->voteDrawing($id, $data);
+
+        return redirect('/admin');
+        
+    }
+
+    public function voteSinging(Request $request, $id){
+        
+        $data = $request->all();
+        
+        $this->user->voteSinging($id, $data);
+
+        return redirect('/admin');
+        
+    }
+
+    public function voteDancing(Request $request, $id){
+        
+        $data = $request->all();
+        
+        $this->user->voteDancing($id, $data);
+
+        return redirect('/admin');
+        
     }
 
 }

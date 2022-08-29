@@ -33,6 +33,29 @@
                   <p>Total Votes : {{ $peserta->TotalVote }}</p>
                   <a href="{{route('peserta.index')}}" class="btn btn-success">Go Home</a>
                   <a href="{{route('peserta.edit',$peserta->id)}}" class="btn btn-primary">Edit</a>
+                  
+                  @if ($peserta->category === "Drawing")
+                  <form action="{{ route('peserta.voteDrawing', Auth::user()->id) }}" enctype="multipart/form-data" method="POST">
+                    @csrf
+                    <button type="submit"  class="form-control" name="pesertaDrawing_id" id="pesertaDrawing_id" value="{{ $peserta->id }}" >Vote 1</button>
+                  </form>
+                  @endif
+
+                  @if ($peserta->category === "Singing")
+                  <form action="{{ route('peserta.voteSinging', Auth::user()->id) }}" enctype="multipart/form-data" method="POST">
+                    @csrf
+                    <button type="submit"  class="form-control" name="pesertaSinging_id" id="pesertaSinging_id" value="{{ $peserta->id }}" >Vote 2</button>
+                  </form>
+                  @endif
+
+                  @if ($peserta->category === "Dancing")
+                  <form action="{{ route('peserta.voteDancing', Auth::user()->id) }}" enctype="multipart/form-data" method="POST">
+                    @csrf
+                    <button type="submit"  class="form-control" name="pesertaDancing_id" id="pesertaDancing_id" value="{{ $peserta->id }}" >Vote 3</button>
+                  </form>
+                  @endif
+
+                  {{ $peserta->id }}
                 </div>
               </div>
 

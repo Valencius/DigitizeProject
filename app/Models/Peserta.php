@@ -10,6 +10,10 @@ class Peserta extends Model
     use HasFactory;
 
     protected $fillable = [
-        'picture', 'Nama','creator','desc','category'
+        'picture', 'Nama','creator','desc','category','TotalVote'
     ];
+
+    public function users(){
+        return $this->hasMany(User::class);
+    }
 }

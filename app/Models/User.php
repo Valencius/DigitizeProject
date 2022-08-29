@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'pesertaDrawing_id',
+        'pesertaSinging_id',
+        'pesertaDancing_id'
     ];
 
     /**
@@ -41,4 +44,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function peserta(){
+        return $this->belongsTo(Peserta::class);
+    }
 }

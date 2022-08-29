@@ -28,7 +28,9 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
 });
 
 // already login
-
+Route::post('/peserta/voteDrawing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDrawing'])->name('peserta.voteDrawing');
+Route::post('/peserta/voteSinging/{id}', [App\Http\Controllers\PesertaController::class, 'voteSinging'])->name('peserta.voteSinging');
+Route::post('/peserta/voteDancing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDancing'])->name('peserta.voteDancing');
 
 // not yet login
 Route::get('/', function () {
@@ -51,4 +53,5 @@ require __DIR__.'/auth.php';
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 

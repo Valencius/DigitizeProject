@@ -20,6 +20,12 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedInteger('pesertaDrawing_id')->nullable();
+            $table->foreign('pesertaDrawing_id')->references('id')->on('pesertas')->nullable();
+            $table->unsignedInteger('pesertaSinging_id')->nullable();
+            $table->foreign('pesertaSinging_id')->references('id')->on('pesertas')->nullable();
+            $table->unsignedInteger('pesertaDancing_id')->nullable();
+            $table->foreign('pesertaDancing_id')->references('id')->on('pesertas')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -15,6 +15,11 @@ interface IPesertaRepository{
     public function updatePeserta($id, array $data);
 
     public function deletePeserta($id);
+
+    public function voteDrawing($id, array $data);
+    public function voteSinging($id, array $data);
+    public function voteDancing($id, array $data);
+
 }
 
 
