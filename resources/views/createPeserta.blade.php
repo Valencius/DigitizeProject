@@ -27,7 +27,11 @@
 
           <div class="mb-3">
             <label for="category" class="form-label">Category Lomba</label>
-            <input type="text" class="form-control" name="category" id="category" placeholder="Category">
+            <select class="form-select" name="category" id="category">
+              <option value="Drawing">Drawing</option>
+              <option value="Singing">Singing</option>
+              <option value="Dancing">Dancing</option>
+            </select>
           </div>
 
           <div class="mb-3">

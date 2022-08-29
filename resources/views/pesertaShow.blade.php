@@ -12,7 +12,19 @@
         <div class="col-md-9" style="display:flex">
 
             <div class="container m-2 p-2">
-                <img src="{{ asset('files/'.$peserta->picture) }}" height="450px" alt="...">
+              @if ($peserta->category === "Drawing")
+              <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top" alt="...">
+            @endif
+            @if ($peserta->category === "Singing")
+              <audio controls class="card-img-top">
+                <source src="{{ asset('files/'.$peserta->picture) }}">
+              </audio>
+            @endif
+            @if ($peserta->category === "Dancing")
+              <video controls>
+                <source src="{{ asset('files/'.$peserta->picture) }}">
+              </video>
+            @endif
                 <div class="container m-2 p-2">
                   <h2>{{ $peserta->creator }}</h2>
                   <h3>Category: {{ $peserta->category }}</h3>

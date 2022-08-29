@@ -12,7 +12,20 @@
         <div class="col-md-6" style="display:flex">
             @foreach ($pesertas as $peserta)
             <div class="card m-2 p-2" style="width: 18rem;">
-                <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top" alt="...">
+                @if ($peserta->category === "Drawing")
+                  <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top" alt="...">
+                @endif
+                @if ($peserta->category === "Singing")
+                  <audio controls>
+                    <source src="{{ asset('files/'.$peserta->picture) }}">
+                  </audio>
+                @endif
+                @if ($peserta->category === "Dancing")
+                  <video controls>
+                    <source src="{{ asset('files/'.$peserta->picture) }}">
+                  </video>
+                @endif
+                
                 <td>{{$peserta->picture}}</td>
                 <div class="card-body">
                   <h5 class="card-title">{{ $peserta->Nama }}</h5>

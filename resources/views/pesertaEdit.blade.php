@@ -24,10 +24,16 @@
             <label for="creator" class="form-label">Creator</label>
             <input type="text" class="form-control" name="creator" id="creator" value="{{ $peserta->creator }}" placeholder="Enter Creator">
           </div>
-          <div class="mb-3">
-            <label for="category" class="form-label">Category</label>
-            <input type="text" class="form-control" name="category" id="category" value="{{ $peserta->category }}" placeholder="Enter Category">
-          </div>
+          
+            <div class="mb-3">
+              <label for="category" class="form-label">Category Lomba</label>
+              <select class="form-select" name="category" id="category">
+                <option value="Drawing" @if($peserta->category === "Drawing") selected @endif>Drawing</option>
+                <option value="Singing" @if($peserta->category === "Singing") selected @endif>Singing</option>
+                <option value="Dancing" @if($peserta->category === "Dancing") selected @endif>Dancing</option>
+              </select>
+            </div>
+          
 
           <div class="mb-3">
             <label for="desc" class="form-label">Description</label>
