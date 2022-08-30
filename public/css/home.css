@@ -58,8 +58,10 @@ h1 {
     color: #DFC1FE;
 }
 
+/* z-index biar pas layarnya kecil, ellipse nya ga nutup tulisannya */
 .hero p {
     font-size: 24pt !important;
+    z-index: 1;
 }
 
 #ellipse1 {
@@ -68,6 +70,7 @@ h1 {
     height: 400px;
     left: -150px;
     top: 300px;
+    z-index: -1;
 }
 
 #ellipse2 {
@@ -76,6 +79,7 @@ h1 {
     height: 142.13px;
     left: 1100px;
     top: 200px;
+    z-index: -1;
 }
 
 #triangle1 {
@@ -84,6 +88,7 @@ h1 {
     height: 120px;
     left: 257.16px;
     top: 649px;
+    z-index: -1;
 }
 
 #triangle2 {
@@ -92,4 +97,5 @@ h1 {
     height: 713.02px;
     left: 1050px;
     top: 364px;
+    z-index: -1;
 }
