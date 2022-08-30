@@ -122,4 +122,22 @@ class PesertaController extends Controller
         
     }
 
+
+    public function seeAllDrawing(){
+        $pesertas = $this->peserta->getAllPesertas();
+
+        return view('seeAllDrawing')->with('pesertas', $pesertas);
+    }
+
+    public function seeAllSinging(){
+        $pesertas = $this->peserta->getAllPesertas();
+
+        return view('seeAllSinging')->with('pesertas', $pesertas);
+    }
+
+    public function seeAllDancing(){
+        $pesertas = $this->peserta->getAllPesertas();
+
+        return view('seeAllDancing')->with('pesertas', $pesertas);
+    }
 }

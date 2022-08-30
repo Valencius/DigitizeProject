@@ -32,11 +32,15 @@ Route::post('/peserta/voteDrawing/{id}', [App\Http\Controllers\PesertaController
 Route::post('/peserta/voteSinging/{id}', [App\Http\Controllers\PesertaController::class, 'voteSinging'])->name('peserta.voteSinging');
 Route::post('/peserta/voteDancing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDancing'])->name('peserta.voteDancing');
 
+
+
 // not yet login
 Route::get('/', function () {
     return view('home');
 });
-
+Route::get('/category/drawing', [App\Http\Controllers\PesertaController::class, 'seeAllDrawing'])->name('category.drawing');
+Route::get('/category/singing', [App\Http\Controllers\PesertaController::class, 'seeAllSinging'])->name('category.singing');
+Route::get('/category/dancing', [App\Http\Controllers\PesertaController::class, 'seeAllDancing'])->name('category.dancing');
 
 
 
