@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Auth;
 
 // admin
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
-    Route::get('/', [App\Http\Controllers\PesertaController::class, 'index'])->name('peserta.index');
     Route::get('/create', [App\Http\Controllers\PesertaController::class, 'createPeserta'])->name('peserta.create');
     Route::post('/store', [App\Http\Controllers\PesertaController::class, 'store'])->name('peserta.store');
     Route::get('/peserta/edit/{id}', [App\Http\Controllers\PesertaController::class, 'edit'])->name('peserta.edit');
@@ -29,15 +28,12 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
 // already login
 Route::prefix('peserta')->middleware(['auth'])->group(function(){
     Route::post('/voteDrawing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDrawing'])->name('peserta.voteDrawing');
-Route::post('/voteSinging/{id}', [App\Http\Controllers\PesertaController::class, 'voteSinging'])->name('peserta.voteSinging');
-Route::post('/voteDancing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDancing'])->name('peserta.voteDancing');
-Route::get('/{id}', [App\Http\Controllers\PesertaController::class, 'show'])->name('peserta.show');
+    Route::post('/voteSinging/{id}', [App\Http\Controllers\PesertaController::class, 'voteSinging'])->name('peserta.voteSinging');
+    Route::post('/voteDancing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDancing'])->name('peserta.voteDancing');
+    Route::get('/{id}', [App\Http\Controllers\PesertaController::class, 'show'])->name('peserta.show');
 
 });
-Route::post('/peserta/voteDrawing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDrawing'])->name('peserta.voteDrawing');
-Route::post('/peserta/voteSinging/{id}', [App\Http\Controllers\PesertaController::class, 'voteSinging'])->name('peserta.voteSinging');
-Route::post('/peserta/voteDancing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDancing'])->name('peserta.voteDancing');
-Route::get('/peserta/{id}', [App\Http\Controllers\PesertaController::class, 'show'])->name('peserta.show');
+
 
 
 // not yet login
