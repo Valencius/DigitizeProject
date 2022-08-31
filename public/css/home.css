@@ -156,11 +156,10 @@ h3 {
 
 .drawing-comp {
     height:80vh !important;
-    width: 1440px !important;
+    width: 100% !important;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    align-items: center;
 }
 
 h2 {
@@ -204,5 +203,19 @@ h2 {
 }
 
 h4, h5 {
-    
+    font-weight: 800 !important;
+}
+
+#vote {
+    background-color: var(--lavender);
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+.list-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

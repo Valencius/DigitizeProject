@@ -43,20 +43,23 @@
                     <a id="see-all-link">See all</a>
                 </div>
                 <div class="list-home">
+                    <?php $count = 0; ?>
                     @foreach ($pesertas as $peserta)
-                    @if($peserta->category === "Drawing")
-                    <div class="card-drawing" style="background-image: linear-gradient(36.07deg, rgba(0, 0, 0, 0.6) 3.45%, rgba(0, 0, 0, 0) 97.47%), url({{ asset('files/'.$peserta->picture) }})">
-                
-                        {{-- <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top" alt="..."> --}}
-                        <div class="card-body-drawing">
-                            <div class="card-detail">
-                                <h4 class="card-title">{{ $peserta->creator }}</h4>
-                                <h5 class="card-title">{{ $peserta->Nama }}</h5>
+                        <?php if($count == 3) break; ?>
+                        @if($peserta->category === "Drawing")
+                            <div class="card-drawing" style="background-image: linear-gradient(36.07deg, rgba(0, 0, 0, 0.6) 3.45%, rgba(0, 0, 0, 0) 97.47%), url({{ asset('files/'.$peserta->picture) }})">
+                        
+                                {{-- <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top" alt="..."> --}}
+                                <div class="card-body-drawing">
+                                    <div class="card-detail">
+                                        <h4 class="card-title">{{ $peserta->creator }}</h4>
+                                        <h5 class="card-title">{{ $peserta->Nama }}</h5>
+                                    </div>
+                                    <a href="{{ route('peserta.show',$peserta->id) }}" class="btn btn-primary" id="vote">Vote</a>
+                                </div>
                             </div>
-                            <a href="{{ route('peserta.show',$peserta->id) }}" class="btn btn-primary">Vote</a>
-                        </div>
-                    </div>
-                    @endif
+                        <?php $count++; ?>
+                        @endif
                     @endforeach
                 </div>
             </div>
