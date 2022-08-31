@@ -38,10 +38,15 @@ nav {
     transition: all 0.3s ease-out;
 }
 
+#login-btn{
+    background-color: #5753FF;
+    color: #FFFFFF;
+}
+
 #login-btn:hover, #register-btn:hover{
     transition: all 0.3s ease-out;
     transform: scale(1.1);
-    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
+    box-shadow: 0 0px 15px #8F46D9, 0 4px 8px #1E1E1E;
 }
 
 .home {
@@ -97,7 +102,7 @@ h1 {
 .btn:hover{
     transition: all 0.3s ease-out;
     transform: scale(1.1);
-    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
+    box-shadow: 0 0px 15px #8F46D9, 0 4px 8px #1E1E1E;
 }
 
 #ellipse1 {

@@ -51,9 +51,25 @@ nav {
 #login-btn, #register-btn{ /* login sama register di navbar */
     background-color: var(--white);
     color: var(--lavender);
-    padding: 16px 24px;
     font-weight: 800;
     border-radius: 8px;
+    width: 111px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+}
+
+#login-btn{
+    background-color: #5753FF;
+    color: #FFFFFF;
+}
+
+#login-btn:hover, #register-btn:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+    box-shadow: 0 0px 15px #8F46D9, 0 4px 8px #1E1E1E;
 }
 
 #submit-btn{
@@ -93,3 +109,8 @@ nav {
     border: 0.5px solid rgba(255, 255, 255, 0.25) !important;
 }
 
+
+.btn-link:hover{
+    transform: none;
+    box-shadow: none;
+}
