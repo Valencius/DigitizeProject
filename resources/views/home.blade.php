@@ -40,7 +40,7 @@
             <div class="drawing-comp" id="#drawing-section">
                 <div id="drawing-heading">
                     <h2>Drawing Competition</h2>
-                    <a id="see-all-link" href="#">See all</a>
+                    <a id="see-all-link" href="{{ route('category.drawing')}}">See all</a>
                 </div>
                 <div class="list-home">
                     <?php $count = 0; ?>
@@ -65,7 +65,7 @@
             <div class="singing-comp">
                 <div id="singing-heading">
                     <h2>Singing Competition</h2>
-                    <a id="see-all-link" href="#">See all</a>
+                    <a id="see-all-link" href="{{ route('category.singing')}}">See all</a>
                 </div>
                 <div class="list-home-singing">
                     <?php $count = 0; ?>
@@ -93,7 +93,7 @@
             <div class="dancing-comp">
                 <div id="dancing-heading">
                     <h2>Dancing Competition</h2>
-                    <a id="see-all-link" href="#">See all</a>
+                    <a id="see-all-link" href="{{ route('category.dancing')}}">See all</a>
                 </div>
                 <div class="list-home">
                     <?php $count = 0; ?>

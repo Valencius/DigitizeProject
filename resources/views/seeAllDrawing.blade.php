@@ -2,42 +2,33 @@
 
 @section('content')
 
-<h1 class="text-center mt-2">All Drawing Peserta</h1>
-<hr>
+<h2 class="text-center mt-2 " style="color: white; font-weight: 800; ">Drawing Competition</h1>
+<h4 class="text-center mt-2 " style="color: white; font-weight: 600; font-size: 32px;">Vote Your Favourite Drawing</h1>
+
 <br>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6" style="display:flex">
-            @foreach ($pesertas as $peserta)
-            @if($peserta->category === "Drawing")
-            <div class="card m-2 p-2" style="width: 18rem;">
-                
-                  <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top" alt="...">
-                
-    
-                
-                <td>{{$peserta->picture}}</td>
-                <div class="card-body">
-                  <h5 class="card-title">{{ $peserta->Nama }}</h5>
-                  <h5 class="card-title">{{ $peserta->category }}</h5>
-                  <h5 class="card-title">Creator: {{ $peserta->creator }}</h5>
-                  <hr>
-                  <p class="card-text">{{ $peserta->desc}} </p>
-                  <a href="{{ route('peserta.show',$peserta->id) }}" class="btn btn-primary">View Detail</a>
-                  <form action="{{ route('peserta.delete', $peserta->id)}}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
-                </div>
+<div class="container pt-5">
+  <div class="col-md-12">
+      <div class="home">
+          <div>
+              <div class="list-home">
+                  @foreach ($pesertas as $peserta)
+                      @if($peserta->category === "Drawing")
+                          <div class="card-drawing" style="background-image: linear-gradient(36.07deg, rgba(0, 0, 0, 0.6) 3.45%, rgba(0, 0, 0, 0) 97.47%), url({{ asset('files/'.$peserta->picture) }})">
+                              <div class="card-body-drawing">
+                                  <div class="card-detail">
+                                      <h4 class="card-title">{{ $peserta->creator }}</h4>
+                                      <h5 class="card-title">{{ $peserta->Nama }}</h5>
+                                  </div>
+                                  <a href="{{ route('peserta.show',$peserta->id) }}" class="btn btn-primary" id="vote">Vote</a>
+                              </div>
+                          </div>
+                      @endif
+                  @endforeach
               </div>
-              @endif
-            @endforeach
-        </div>
-    </div>
+          </div>
+      </div>
+  </div>
 </div>
-
-
 @endsection

@@ -12,11 +12,11 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="./css/home.css"> {{-- css home --}}
+    <link rel="stylesheet" href="{{asset('/css/home.css')}}"> {{-- css home --}}
     <link rel="stylesheet" href="{{ asset('css/createPeserta.css') }}">
-    <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/register.css">
-    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="{{asset('/css/login.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/register.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/admin.css')}}">
     <link rel="stylesheet" href="{{ asset('css/email.css') }}">
     
     {{-- tambahin disini buat css lainnya --}}
