@@ -35,6 +35,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-out;
+}
+
+#login-btn:hover, #register-btn:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
 }
 
 .home {
@@ -54,6 +61,8 @@ nav {
     padding: 16px 24px;
     font-weight: 800;
     font-size: 18pt;
+    border: #5753FF;
+    transition: all 0.3s ease-out;
 }
 
 .hero, .competition {
@@ -79,6 +88,13 @@ h1 {
 .hero p {
     font-size: 24pt !important;
     z-index: -1;
+}
+
+
+.btn:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
 }
 
 #ellipse1 {
@@ -132,20 +148,59 @@ h3 {
     color: var(--white);
     border-radius: 10px;
     font-size: 12pt;
+    transition: all 0.3s ease-out;
 }
 
-.category-card {
+#category-btn:hover{
+    box-shadow: none;
+    border-color: #5753FF;
+}
+
+.category-card-draw {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 60px;
     gap: 38px;
     background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
     border-style: outset;
     border-width: 1px;
     border-color: var(--white);
     border-radius: 30px;
 }
+
+.category-card-sing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 38px;
+    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    border-style: outset;
+    border-width: 1px;
+    border-color: var(--white);
+    border-radius: 30px;
+}
+
+.category-card-dance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 38px;
+    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    border-style: outset;
+    border-width: 1px;
+    border-color: var(--white);
+    border-radius: 30px;
+}
+
 
 .category {
     display: flex;
@@ -154,6 +209,20 @@ h3 {
     gap: 80px;
 }
 
+.category-card-draw:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
+}
+
+.category-card-sing:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
+}
+
+.category-card-dance:hover{
+    transform: scale(1.05);
+  box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
+}
 
 /* Drawing Competition */
 

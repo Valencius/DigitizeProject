@@ -1,6 +1,5 @@
 :root {
     --black: #1E1E1E;
-    --black-input: #1E1E1E80;
     --white: #FFFFFF;
     --purple: #8F46D9;
     --lavender: #5753FF;
@@ -48,12 +47,23 @@ nav {
     top: 364px;
 }
 
-#login-btn, #register-btn{ /* login sama register di navbar */
-    background-color: var(--white);
-    color: var(--lavender);
-    padding: 16px 24px;
-    font-weight: 800;
-    border-radius: 8px;
+
+#card-box{
+    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 40px;
+}
+
+#card-header{
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--white);
+}
+
+#email-title{
+    font-family: 'Plus Jakarta Text';
+    font-weight: 700;
+    color: var(--white);
 }
 
 #submit-btn{
@@ -62,34 +72,3 @@ nav {
     font-size: 12pt;
     border-radius: 10px;
 }
-
-#card-box{
-    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.1) 100%);
-    border-radius: 40px;
-    stroke: #FFFFFF;
-}
-
-#card-header{
-    margin-left: 20px;
-    font-weight: 700;
-    font-size: 32px;
-}
-
-#email-title, #password-title{
-    font-family: 'Plus Jakarta Text';
-    font-weight: 700;
-    
-}
-
-#password-title{
-    font-family: 'Plus Jakarta Text';
-    font-weight: 700;
-    
-}
-
-.form-control {
-    color: var(--white) !important;
-    background: var(--black-input) !important;
-    border: 0.5px solid rgba(255, 255, 255, 0.25) !important;
-}
-
