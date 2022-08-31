@@ -90,6 +90,9 @@ h1 {
     z-index: -1;
 }
 
+.btn {
+    font-weight: 800 !important;
+}
 
 .btn:hover{
     transition: all 0.3s ease-out;
