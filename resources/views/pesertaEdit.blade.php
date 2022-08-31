@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="container mt-5 mb-5">
+<div class="container mt-5 mb-5" id="create-peserta-box">
 
-    <h2>Update peserta</h2>
+    <h2 class="py-3">Update peserta</h2>
     <hr>
 
     <form action="{{ route('peserta.update', $peserta->id) }}" enctype="multipart/form-data" method="POST">
