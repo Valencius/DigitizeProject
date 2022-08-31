@@ -10,6 +10,10 @@
 
 <div class="container">
     <div class="row">
+      @if(count($pesertas) === 0)
+  
+        <h5 style="text-align: center; padding: 2rem 0 ; color: #ffffff79;">No participant</h5>
+      @endif
         <div class="col-md-6" style="display: flex">
             @foreach ($pesertas as $peserta)
             <div class="card m-2 p-2 card-box" >
