@@ -2,9 +2,6 @@
 
 @section('content')
 
-<h1 class="text-center mt-2 detail-title" >{{ $peserta->Nama}}</h1>
-<hr>
-<br>
 
 
 <div class="container">
@@ -38,25 +35,25 @@
                   @if ($peserta->category === "Drawing")
                   <form action="{{ route('peserta.voteDrawing', Auth::user()->id) }}" enctype="multipart/form-data" method="POST">
                     @csrf
-                    <button type="submit"  class="form-control add-button" name="pesertaDrawing_id" id="pesertaDrawing_id" value="{{ $peserta->id }}" >Vote 1</button>
+                    <button type="submit"  class="form-control add-button" name="pesertaDrawing_id" id="pesertaDrawing_id" value="{{ $peserta->id }}" >Vote</button>
                   </form>
                   @endif
 
                   @if ($peserta->category === "Singing")
                   <form action="{{ route('peserta.voteSinging', Auth::user()->id) }}" enctype="multipart/form-data" method="POST">
                     @csrf
-                    <button type="submit"  class="form-control" name="pesertaSinging_id" id="pesertaSinging_id" value="{{ $peserta->id }}" >Vote 2</button>
+                    <button type="submit"  class="form-control" name="pesertaSinging_id" id="pesertaSinging_id" value="{{ $peserta->id }}" >Vote</button>
                   </form>
                   @endif
 
                   @if ($peserta->category === "Dancing")
                   <form action="{{ route('peserta.voteDancing', Auth::user()->id) }}" enctype="multipart/form-data" method="POST">
                     @csrf
-                    <button type="submit"  class="form-control" name="pesertaDancing_id" id="pesertaDancing_id" value="{{ $peserta->id }}" >Vote 3</button>
+                    <button type="submit"  class="form-control" name="pesertaDancing_id" id="pesertaDancing_id" value="{{ $peserta->id }}" >Vote</button>
                   </form>
                   @endif
 
-                  {{ $peserta->id }}
+                  
                 </div>
               </div>
 
