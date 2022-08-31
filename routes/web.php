@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 
 // admin
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
+    Route::get('/', [App\Http\Controllers\PesertaController::class, 'index'])->name('peserta.index');
     Route::get('/create', [App\Http\Controllers\PesertaController::class, 'createPeserta'])->name('peserta.create');
     Route::post('/store', [App\Http\Controllers\PesertaController::class, 'store'])->name('peserta.store');
     Route::get('/peserta/edit/{id}', [App\Http\Controllers\PesertaController::class, 'edit'])->name('peserta.edit');
