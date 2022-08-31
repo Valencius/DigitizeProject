@@ -2,30 +2,30 @@
 
 @section('content')
 
-<div class="container mt-5 mb-5">
+<div class="container mt-5 mb-5" id="create-peserta-box">
 
-    <h2>Update peserta</h2>
+    <h2 class="py-3">Update peserta</h2>
     <hr>
 
-    <form action="{{ route('peserta.update', $peserta->id) }}" enctype="multipart/form-data" method="POST">
+    <form action="{{ route('peserta.update', $peserta->id) }}" enctype="multipart/form-data" method="POST" id="formCreate">
         @csrf
 
-        <div class="mb-3">
+        <div class="mb-3 input-box">
             <label for="picture" class="form-label">Choose Picture</label>
             <input class="form-control" type="file" name="picture" id="picture">
           </div>
 
-        <div class="mb-3">
+        <div class="mb-3 input-box">
             <label for="Nama" class="form-label">Title</label>
             <input type="text" class="form-control" name="Nama" id="Nama" value="{{ $peserta->Nama }}" placeholder="Enter Title">
           </div>
 
-          <div class="mb-3">
+          <div class="mb-3 input-box">
             <label for="creator" class="form-label">Creator</label>
             <input type="text" class="form-control" name="creator" id="creator" value="{{ $peserta->creator }}" placeholder="Enter Creator">
           </div>
           
-            <div class="mb-3">
+            <div class="mb-3 input-box">
               <label for="category" class="form-label">Category Lomba</label>
               <select class="form-select" name="category" id="category">
                 <option value="Drawing" @if($peserta->category === "Drawing") selected @endif>Drawing</option>
@@ -35,7 +35,7 @@
             </div>
           
 
-          <div class="mb-3">
+          <div class="mb-3 mx-5 input-box">
             <label for="desc" class="form-label">Description</label>
             <textarea class="form-control" name="desc" id="desc" placeholder="Enter Description">{{ $peserta->desc }}</textarea>
           </div>
