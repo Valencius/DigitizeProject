@@ -22,22 +22,22 @@
                     <div class="category-card">
                         <img src="{{ asset('asset/palette.png')}}">
                         <h3>Drawing</h3>
-                        <a href="#" class="btn" id="category-btn">Jump to this category</a>
+                        <a href="#drawing-heading" class="btn" id="category-btn">Jump to this category</a>
                     </div>
                     <div class="category-card">
                         <img src="{{ asset('asset/microphone.png')}}">
                         <h3>Singing</h3>
-                        <a href="#" class="btn" id="category-btn">Jump to this category</a>
+                        <a href="#singing-heading" class="btn" id="category-btn">Jump to this category</a>
                     </div>
                     <div class="category-card">
                         <img src="{{ asset('asset/dancing.png')}}">
                         <h3>Dancing</h3>
-                        <a href="#" class="btn" id="category-btn">Jump to this category</a>
+                        <a href="#dancing-heading" class="btn" id="category-btn">Jump to this category</a>
                     </div>
                 </div>
             </div>
 
-            <div class="drawing-comp">
+            <div class="drawing-comp" id="#drawing-section">
                 <div id="drawing-heading">
                     <h2>Drawing Competition</h2>
                     <a id="see-all-link" href="#">See all</a>
@@ -47,9 +47,8 @@
                     @foreach ($pesertas as $peserta)
                         <?php if($count == 3) break; ?>
                         @if($peserta->category === "Drawing")
-                            <div class="card-dancing" style="radial-gradient(127.68% 13497.49% at 1.6% 8.93%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0) 100%)">
-                                
-                                <div class="card-body-dancing">
+                            <div class="card-drawing" style="background-image: linear-gradient(36.07deg, rgba(0, 0, 0, 0.6) 3.45%, rgba(0, 0, 0, 0) 97.47%), url({{ asset('files/'.$peserta->picture) }})">
+                                <div class="card-body-drawing">
                                     <div class="card-detail">
                                         <h4 class="card-title">{{ $peserta->creator }}</h4>
                                         <h5 class="card-title">{{ $peserta->Nama }}</h5>
@@ -101,13 +100,18 @@
                     @foreach ($pesertas as $peserta)
                         <?php if($count == 3) break; ?>
                         @if($peserta->category === "Dancing")
-                            <div class="card-drawing" style="background: url({{ asset('files/'.$peserta->picture) }})">
-                                <div class="card-body-drawing">
-                                    <div class="card-detail">
-                                        <h4 class="card-title">{{ $peserta->creator }}</h4>
-                                        <h5 class="card-title">{{ $peserta->Nama }}</h5>
+                            <div class="card-dancing" style="background: radial-gradient(127.68% 13497.49% at 1.6% 8.93%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0) 100%)">
+                                <div class="dancing-card">
+                                    <video controls>
+                                        <source src="{{ asset('files/'.$peserta->picture) }}">
+                                    </video>
+                                    <div class="card-body-dancing">
+                                        <div class="card-detail">
+                                            <h4 class="card-title">{{ $peserta->creator }}</h4>
+                                            <h5 class="card-title">{{ $peserta->Nama }}</h5>
+                                        </div>
+                                        <a href="{{ route('peserta.show',$peserta->id) }}" class="btn btn-primary" id="vote">Vote</a>
                                     </div>
-                                    <a href="{{ route('peserta.show',$peserta->id) }}" class="btn btn-primary" id="vote">Vote</a>
                                 </div>
                             </div>
                         <?php $count++; ?>

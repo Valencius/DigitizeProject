@@ -57,12 +57,15 @@ nav {
 }
 
 .hero, .competition {
-    height:80vh !important;
     display: flex;
     flex-direction: column;
     gap: 40px;
     align-items: center;
     justify-content: center;
+}
+
+.hero {
+    height:80vh !important;
 }
 
 h1 {
@@ -154,8 +157,7 @@ h3 {
 
 /* Drawing Competition */
 
-.drawing-comp, .singing-comp {
-    height:80vh !important;
+.drawing-comp, .singing-comp, .dancing-comp {
     width: 100% !important;
     display: flex;
     flex-direction: column;
@@ -167,20 +169,23 @@ h2 {
     font-weight: 800 !important;
 }
 
-.card-drawing {
+.card-drawing, .card-dancing {
     width: 350px;
     height: 450px;
     border-style: outset;
     border-width: 1px;
     border-color: var(--white);
     border-radius: 18px;
+}
+
+.card-drawing {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: end;
 }
 
-#drawing-heading, #singing-heading {
+#drawing-heading, #singing-heading, #dancing-heading {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -193,7 +198,7 @@ h2 {
     gap: 10px;
 }
 
-.card-body-drawing, .card-body-singing {
+.card-body-drawing, .card-body-singing, .card-body-dancing {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -245,4 +250,28 @@ audio {
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+
+/* Dancing Competition */
+
+.card-dancing {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+video {
+    padding: 24px 24px;
+    width: 100%;
+    height: auto;
+}
+
+.dancing-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
