@@ -35,9 +35,7 @@ Route::post('/peserta/voteDancing/{id}', [App\Http\Controllers\PesertaController
 
 
 // not yet login
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [App\Http\Controllers\PesertaController::class, 'listHome']);
 Route::get('/category/drawing', [App\Http\Controllers\PesertaController::class, 'seeAllDrawing'])->name('category.drawing');
 Route::get('/category/singing', [App\Http\Controllers\PesertaController::class, 'seeAllSinging'])->name('category.singing');
 Route::get('/category/dancing', [App\Http\Controllers\PesertaController::class, 'seeAllDancing'])->name('category.dancing');

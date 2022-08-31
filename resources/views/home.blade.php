@@ -17,26 +17,49 @@
             </div>
 
             <div class="competition">
-                <h1>Vote for your favorite entries!</h1>
+                <h1 id="competitionHeading">Vote for your favorite entries!</h1>
                 <div class="category">
                     <div class="category-card">
                         <img src="{{ asset('asset/palette.png')}}">
-                        <h2>Drawing</h2>
+                        <h3>Drawing</h3>
                         <a href="#" class="btn" id="category-btn">Jump to this category</a>
                     </div>
                     <div class="category-card">
                         <img src="{{ asset('asset/microphone.png')}}">
-                        <h2>Singing</h2>
+                        <h3>Singing</h3>
                         <a href="#" class="btn" id="category-btn">Jump to this category</a>
                     </div>
                     <div class="category-card">
                         <img src="{{ asset('asset/dancing.png')}}">
-                        <h2>Dancing</h2>
+                        <h3>Dancing</h3>
                         <a href="#" class="btn" id="category-btn">Jump to this category</a>
                     </div>
                 </div>
             </div>
 
+            <div class="drawing-comp">
+                <div id="drawing-heading">
+                    <h2>Drawing Competition</h2>
+                    <a id="see-all-link">See all</a>
+                </div>
+                <div class="list-home">
+                    @foreach ($pesertas as $peserta)
+                    @if($peserta->category === "Drawing")
+                    <div class="card-drawing" style="background-image: linear-gradient(36.07deg, rgba(0, 0, 0, 0.6) 3.45%, rgba(0, 0, 0, 0) 97.47%), url({{ asset('files/'.$peserta->picture) }})">
+                
+                        {{-- <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top" alt="..."> --}}
+                        <div class="card-body-drawing">
+                            <div class="card-detail">
+                                <h4 class="card-title">{{ $peserta->creator }}</h4>
+                                <h5 class="card-title">{{ $peserta->Nama }}</h5>
+                            </div>
+                            <a href="{{ route('peserta.show',$peserta->id) }}" class="btn btn-primary">Vote</a>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
             
         </div>
     </div>

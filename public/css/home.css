@@ -117,7 +117,7 @@ h1 {
 
 /* Competition */
 
-h2 {
+h3 {
     font-size: 32pt !important;
     font-weight: 800 !important;
     z-index: 1;
@@ -149,4 +149,60 @@ h2 {
     flex-direction: row;
     align-items: flex-start;
     gap: 80px;
+}
+
+
+/* Drawing Competition */
+
+.drawing-comp {
+    height:80vh !important;
+    width: 1440px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+h2 {
+    font-size: 48pt !important;
+    font-weight: 800 !important;
+}
+
+.card-drawing {
+    width: 350px;
+    height: 450px;
+    border-style: outset;
+    border-width: 1px;
+    border-color: var(--white);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+}
+
+#drawing-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-body-drawing {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px;
+}
+
+h4, h5 {
+    
 }

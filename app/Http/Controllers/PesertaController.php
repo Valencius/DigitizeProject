@@ -140,4 +140,10 @@ class PesertaController extends Controller
 
         return view('seeAllDancing')->with('pesertas', $pesertas);
     }
+
+    public function listHome() {
+        $pesertas = $this->peserta->getAllPesertas();
+
+        return view('home')->with('pesertas', $pesertas);
+    }
 }

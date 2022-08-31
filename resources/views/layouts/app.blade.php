@@ -27,7 +27,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('asset/logo.png')}}" width="175px" height="48px">
@@ -43,7 +43,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                          </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="#">Competition</a>
+                            <a class="nav-link" href="/#competitionHeading">Competition</a>
                          </li>
                          <li class="nav-item">
                             <a class="nav-link" href="#">Timeline</a>
