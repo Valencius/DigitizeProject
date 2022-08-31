@@ -35,6 +35,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-out;
+}
+
+#login-btn:hover, #register-btn:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
 }
 
 .home {
@@ -54,15 +61,20 @@ nav {
     padding: 16px 24px;
     font-weight: 800;
     font-size: 18pt;
+    border: #5753FF;
+    transition: all 0.3s ease-out;
 }
 
 .hero, .competition {
-    height:80vh !important;
     display: flex;
     flex-direction: column;
     gap: 40px;
     align-items: center;
     justify-content: center;
+}
+
+.hero {
+    height:80vh !important;
 }
 
 h1 {
@@ -76,6 +88,16 @@ h1 {
 .hero p {
     font-size: 24pt !important;
     z-index: -1;
+}
+
+.btn {
+    font-weight: 800 !important;
+}
+
+.btn:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
 }
 
 #ellipse1 {
@@ -117,7 +139,7 @@ h1 {
 
 /* Competition */
 
-h2 {
+h3 {
     font-size: 32pt !important;
     font-weight: 800 !important;
     z-index: 1;
@@ -129,24 +151,199 @@ h2 {
     color: var(--white);
     border-radius: 10px;
     font-size: 12pt;
+    transition: all 0.3s ease-out;
 }
 
-.category-card {
+#category-btn:hover{
+    box-shadow: none;
+    border-color: #5753FF;
+}
+
+.category-card-draw {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 60px;
     gap: 38px;
     background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
     border-style: outset;
     border-width: 1px;
     border-color: var(--white);
     border-radius: 30px;
 }
 
+.category-card-sing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 38px;
+    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    border-style: outset;
+    border-width: 1px;
+    border-color: var(--white);
+    border-radius: 30px;
+}
+
+.category-card-dance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 38px;
+    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    border-style: outset;
+    border-width: 1px;
+    border-color: var(--white);
+    border-radius: 30px;
+}
+
+
 .category {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 80px;
+}
+
+.category-card-draw:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
+}
+
+.category-card-sing:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
+}
+
+.category-card-dance:hover{
+    transform: scale(1.05);
+  box-shadow: 0 0px 30px #8F46D9, 0 4px 8px #1E1E1E;
+}
+
+/* Drawing Competition */
+
+.drawing-comp, .singing-comp, .dancing-comp {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+h2 {
+    font-size: 48pt !important;
+    font-weight: 800 !important;
+}
+
+.card-drawing, .card-dancing {
+    width: 350px;
+    height: 450px;
+    border-style: outset;
+    border-width: 1px;
+    border-color: var(--white);
+    border-radius: 18px;
+}
+
+.card-drawing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+}
+
+#drawing-heading, #singing-heading, #dancing-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-body-drawing, .card-body-singing, .card-body-dancing {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px;
+}
+
+h4, h5 {
+    font-weight: 800 !important;
+}
+
+#vote {
+    background-color: var(--lavender);
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+.list-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#see-all-link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+/* Singing Competition */
+
+.card-singing {
+    width: 100%;
+    background-color: radial-gradient(127.68% 13497.49% at 1.6% 8.93%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0) 100%);
+    border-style: outset;
+    border-width: 1px;
+    border-color: var(--white);
+    border-radius: 18px;
+}
+
+audio {
+    padding: 0px 48px;
+}
+
+.list-home-singing {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+/* Dancing Competition */
+
+.card-dancing {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+video {
+    padding: 24px 24px;
+    width: 100%;
+    height: auto;
+}
+
+.dancing-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }

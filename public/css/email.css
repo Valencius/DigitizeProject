@@ -1,0 +1,74 @@
+:root {
+    --black: #1E1E1E;
+    --white: #FFFFFF;
+    --purple: #8F46D9;
+    --lavender: #5753FF;
+    font-size: 18px;
+}
+
+nav {
+    background-color: var(--black)!important; 
+    padding: 24px 100px !important;
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+#ellipse1 {
+    position: absolute;
+    width: 413.57px;
+    height: 400px;
+    left: -150px;
+    top: 300px;
+}
+
+#ellipse2 {
+    position: absolute;
+    width: 146.95px;
+    height: 142.13px;
+    left: 1100px;
+    top: 200px;
+}
+
+#triangle1 {
+    position: absolute;
+    width: 109px;
+    height: 120px;
+    left: 257.16px;
+    top: 649px;
+}
+
+#triangle2 {
+    position: absolute;
+    width: 670.53px;
+    height: 713.02px;
+    left: 1050px;
+    top: 364px;
+}
+
+
+#card-box{
+    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 40px;
+}
+
+#card-header{
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--white);
+}
+
+#email-title{
+    font-family: 'Plus Jakarta Text';
+    font-weight: 700;
+    color: var(--white);
+}
+
+#submit-btn{
+    background-color: var(--lavender);
+    font-weight: 500;
+    font-size: 12pt;
+    border-radius: 10px;
+}

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/register.css">
     <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="{{ asset('css/email.css') }}">
     
     {{-- tambahin disini buat css lainnya --}}
     {{-- boleh liat home.css sama variables.scss dulu soalnya ada brp yg gw set default--}}
@@ -29,7 +30,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('asset/logo.png')}}" width="175px" height="48px">
@@ -42,10 +43,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Competition</a>
+                        <a class="nav-link" href="/#competitionHeading">Competition</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="#">Timeline</a>
@@ -75,8 +76,8 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
