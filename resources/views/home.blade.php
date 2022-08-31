@@ -1,12 +1,12 @@
 @extends('layouts.app')
 {{-- css tambahin di app.blade.php --}}
+@section('content')
 {{-- buat ornamennya, kalo buat page lain boleh copy aja code img nya--}}
 <img src="{{ asset('asset/ellipse.png')}}" id="ellipse2">
 <img src="{{ asset('asset/ellipse.png')}}" id="ellipse1"> 
 <img src="{{ asset('asset/triangle1.png')}}" id="triangle1">
 <img src="{{ asset('asset/triangle2.png')}}" id="triangle2">
 
-@section('content')
 <div class="container">
     <div class="col-md-12">
         <div class="home">
