@@ -13,6 +13,9 @@ body {
     /* ini gw set semua font defaultnya putih yaa buat info kalo di bg putih fontnya ga keliatan :D */
 }
 
+
+/* navbar */
+
 nav {
     background-color: var(--black)!important; 
     padding: 24px 100px !important;
@@ -25,10 +28,24 @@ nav {
 #login-btn, #register-btn{ /* login sama register di navbar */
     background-color: var(--white);
     color: var(--lavender);
-    padding: 16px 24px;
     font-weight: 800;
     border-radius: 8px;
+    width: 111px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+/* Hero */
 
 #letsvote {
     /* semua yg button lets vote gw setnya gini yaa kalo pake idnya */
@@ -36,14 +53,10 @@ nav {
     color: var(--white);
     padding: 16px 24px;
     font-weight: 800;
+    font-size: 18pt;
 }
 
-.home {
-    display: flex;
-    justify-content: center;
-}
-
-.hero {
+.hero, .competition {
     height:80vh !important;
     display: flex;
     flex-direction: column;
@@ -55,7 +68,6 @@ nav {
 h1 {
     font-size: 64pt !important;
     font-weight: 800 !important;
-    color: #DFC1FE;
 }
 
 .hero p {
@@ -93,3 +105,40 @@ h1 {
     left: 1050px;
     top: 364px;
 }
+
+
+/* Competition */
+
+h2 {
+    font-size: 32pt !important;
+    font-weight: 800 !important;
+}
+
+#category-btn {
+    padding: 14px 16px;
+    background-color: var(--lavender);
+    color: var(--white);
+    border-radius: 10px;
+    font-size: 12pt;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 38px;
+    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
+    border-style: outset;
+    border-width: 1px;
+    border-color: var(--white);
+    border-radius: 30px;
+}
+
+.category {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 80px;
+}
+
