@@ -13,7 +13,7 @@
             <div class="hero">
                 <h1 style="color: #DFC1FE">Digitize Fest 2022</h1>
                 <p>Cast your votes for the best entrants!</p>
-                <a href="{{ route('home') }}" class="btn" id="letsvote">Let's Vote</a>
+                <a href="/#competition-heading" class="btn" id="letsvote">Let's Vote</a>
             </div>
 
             <div class="competition">
@@ -121,7 +121,7 @@
                 <div class="timeline">
                     <p id="timeline-p">Voting ends at</p>
                     <h1 style="color: #DFC1FE">31 September 2022</h1>
-                    <a href="{{ route('home') }}" class="btn" id="letsvote">Let's Vote</a>
+                    <a href="/#competition-heading" class="btn" id="letsvote">Let's Vote</a>
                 </div>
             </div>
         </div>
