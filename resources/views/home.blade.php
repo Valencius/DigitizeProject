@@ -19,17 +19,17 @@
             <div class="competition">
                 <h1 id="competitionHeading">Vote for your favorite entries!</h1>
                 <div class="category">
-                    <div class="category-card">
+                    <div class="category-card-draw">
                         <img src="{{ asset('asset/palette.png')}}">
                         <h3>Drawing</h3>
                         <a href="#" class="btn" id="category-btn">Jump to this category</a>
                     </div>
-                    <div class="category-card">
+                    <div class="category-card-sing">
                         <img src="{{ asset('asset/microphone.png')}}">
                         <h3>Singing</h3>
                         <a href="#" class="btn" id="category-btn">Jump to this category</a>
                     </div>
-                    <div class="category-card">
+                    <div class="category-card-dance">
                         <img src="{{ asset('asset/dancing.png')}}">
                         <h3>Dancing</h3>
                         <a href="#" class="btn" id="category-btn">Jump to this category</a>
