@@ -3,6 +3,7 @@
 <img src="{{ asset('asset/ellipse.png')}}" id="ellipse1"> 
 <img src="{{ asset('asset/triangle1.png')}}" id="triangle1">
 <img src="{{ asset('asset/triangle2.png')}}" id="triangle2">
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
