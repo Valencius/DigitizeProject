@@ -66,7 +66,6 @@ nav {
     background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
     border-radius: 40px;
     border: 1000px purple;
-    
 }
 
 #card-header{
@@ -75,8 +74,11 @@ nav {
     font-size: 32px;
 }
 
-#email-title, #password-title{
+#name-title, #email-title, #password-title, #confirm-password-title {
     font-family: 'Plus Jakarta Text';
     font-weight: 700;
 }
 
+#forgot-link{
+    color: var(--lavender);
+}
