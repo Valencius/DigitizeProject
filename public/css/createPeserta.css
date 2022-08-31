@@ -1,5 +1,6 @@
 :root {
   --black: #1E1E1E;
+  --black-input :#1E1E1E80;
   --white: #FFFFFF;
   --purple: #8F46D9;
   --lavender: #5753FF;
@@ -9,17 +10,52 @@
 h2{
   color: var(--white) !important;
   text-align: center !important;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.541);
+  /* border-height: 70%; */
 }
-.container-create{
-  background-color: #8F46D9 !important;
-  background-image: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
+#create-peserta-box{
+  background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  border-radius: 40px;
+  
+  
+}
+
+#create-peserta-box hr{
+border-width: 0;
+
 }
 
 #formCreate{
   color: var(--white) !important;
-  font-size: large;
+  font-size: larger;
+  width: 100%;
 }
 
+.form-box{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 .form-control , .form-select{
   color: var(--white) !important;
+  background-color: var(--black-input) !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+#create-btn{
+  padding: 14px 16px;
+  background-color: var(--lavender);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-size: 12pt;
+  width: 65%;
+  margin: 1.2rem 0 2rem 0;
+
+}
+
+#create-btn:hover{
+      background-color:#5753FF70 !important;
+      color: #ffffffec !important;
 }
