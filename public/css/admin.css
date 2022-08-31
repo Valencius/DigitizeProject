@@ -1,0 +1,33 @@
+:root {
+  --black: #1E1E1E;
+  --black-input: #1E1E1E80;
+  --white: #FFFFFF;
+  --purple: #8F46D9;
+  --lavender: #5753FF;
+  font-size: 18px;
+}
+
+h1{
+  font-size: xx-large !important;
+}
+
+h5{
+  color: black !important;
+}
+
+p{
+  color: black !important;
+}
+
+.row{
+  gap: 20rem;
+}
+.card-box{
+  display: flex;
+  background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.1) 100%) !important;
+  border-radius: 40px;
+  width: 18rem;
+}
+.picture{
+  opacity: 0%;
+}

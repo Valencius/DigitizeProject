@@ -2,16 +2,16 @@
 
 @section('content')
 
-<h1 class="text-center mt-2">All peserta Peserta</h1>
+<h1 class="text-center mt-2">All Participant</h1>
 <hr>
 <br>
 
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6" style="display:flex">
+        <div class="col-md-6" style="display: flex">
             @foreach ($pesertas as $peserta)
-            <div class="card m-2 p-2" style="width: 18rem;">
+            <div class="card m-2 p-2 card-box" >
                 @if ($peserta->category === "Drawing")
                   <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top" alt="...">
                 @endif
@@ -26,11 +26,11 @@
                   </video>
                 @endif
                 
-                <td>{{$peserta->picture}}</td>
+                <td text="none">{{$peserta->picture}}</td>
                 <div class="card-body">
                   <h5 class="card-title">{{ $peserta->Nama }}</h5>
-                  <h5 class="card-title">{{ $peserta->category }}</h5>
-                  <h5 class="card-title">Creator: {{ $peserta->creator }}</h5>
+                  <h5 class="card-category">{{ $peserta->category }}</h5>
+                  <h5 class="card-creator">Creator: {{ $peserta->creator }}</h5>
                   <hr>
                   <p class="card-text">{{ $peserta->desc}} </p>
                   <a href="{{ route('peserta.show',$peserta->id) }}" class="btn btn-primary">View Detail</a>
@@ -43,7 +43,7 @@
               </div>
             @endforeach
         </div>
-        <a href="{{ route('peserta.create') }}" class="btn btn-primary">Create Peserta</a>
+        <a href="{{ route('peserta.create') }}" class="btn btn-primary">Add Participant</a>
     </div>
 </div>
 

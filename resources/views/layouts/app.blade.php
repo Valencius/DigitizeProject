@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('css/createPeserta.css') }}">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/admin.css">
     
     {{-- tambahin disini buat css lainnya --}}
     {{-- boleh liat home.css sama variables.scss dulu soalnya ada brp yg gw set default--}}
@@ -42,13 +43,13 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
-                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link" href="#">Competition</a>
-                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link" href="#">Timeline</a>
-                         </li>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Competition</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Timeline</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
