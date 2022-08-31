@@ -5,6 +5,7 @@
   --purple: #8F46D9;
   --lavender: #5753FF;
   font-size: 18px;
+  font-family: 'Plus Jakarta Text';
 }
 
 .card-category{
@@ -35,29 +36,12 @@
 .card-img{
   padding: 1.2rem;
 }
-/* h1{
-  font-size: xx-large !important;
-} */
 
-/* h5{
-  color: black !important;
-} */
-
-/* p{
-  color: black !important;
-} */
-
-/* .row{
-  gap: 20rem;
-}
-.picture{
-  opacity: 0%;
-} */
   .card-box{
     display: flex;
     background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.1) 100%) !important;
     border-radius: 40px;
-    width: 200rem;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
 

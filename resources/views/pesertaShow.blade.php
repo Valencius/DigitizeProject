@@ -2,42 +2,43 @@
 
 @section('content')
 
-<h1 class="text-center mt-2 detail-name" >{{ $peserta->Nama}}</h1>
+<h1 class="text-center mt-2 detail-title" >{{ $peserta->Nama}}</h1>
 <hr>
 <br>
 
 
 <div class="container">
     <div class="row">
-        <div class="col-md-9" style="display:flex">
+        <div class="col-md-9 detail-view" >
 
-            <div class="container m-2 p-2">
-              @if ($peserta->category === "Drawing")
-              <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top" alt="...">
+            <div class="container m-2 p-2 up-view-box">
+            @if ($peserta->category === "Drawing")
+              <img src="{{ asset('files/'.$peserta->picture) }}" class="card-img-top view-box" alt="...">
             @endif
             @if ($peserta->category === "Singing")
-              <audio controls class="card-img-top">
+              <audio controls class="card-img-top view-box">
                 <source src="{{ asset('files/'.$peserta->picture) }}">
               </audio>
             @endif
             @if ($peserta->category === "Dancing")
-              <video controls>
+              <video controls class="view-box">
                 <source src="{{ asset('files/'.$peserta->picture) }}">
               </video>
             @endif
                 <div class="container m-2 p-2">
-                  <h2>{{ $peserta->creator }}</h2>
-                  <h3>Category: {{ $peserta->category }}</h3>
+                  <h2 class="details card-creator">{{ $peserta->creator }}</h2>
+                  <h3 class="details card-category">Category: {{ $peserta->category }}</h3>
                   <hr>
-                  <p>{{ $peserta->desc }}</p>
-                  <p>Total Votes : {{ $peserta->TotalVote }}</p>
-                  <a href="{{route('peserta.index')}}" class="btn btn-success">Go Home</a>
+                  <p class=" details card-desc">{{ $peserta->desc }}</p>
+                  <p class="details">Total Votes : {{ $peserta->TotalVote }}</p>
+                <div class="button-group">
+                  <a href="{{route('peserta.index')}}" class="btn btn-success view-button">Go Home</a>
                   <a href="{{route('peserta.edit',$peserta->id)}}" class="btn btn-primary">Edit</a>
-                  
+                </div>
                   @if ($peserta->category === "Drawing")
                   <form action="{{ route('peserta.voteDrawing', Auth::user()->id) }}" enctype="multipart/form-data" method="POST">
                     @csrf
-                    <button type="submit"  class="form-control" name="pesertaDrawing_id" id="pesertaDrawing_id" value="{{ $peserta->id }}" >Vote 1</button>
+                    <button type="submit"  class="form-control add-button" name="pesertaDrawing_id" id="pesertaDrawing_id" value="{{ $peserta->id }}" >Vote 1</button>
                   </form>
                   @endif
 

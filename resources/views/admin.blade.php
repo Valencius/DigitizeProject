@@ -35,7 +35,7 @@
                   <div class="card-text">
                     <h5 class="card-category">{{ $peserta->category }}</h5>
                     <h5 class="card-title">{{ $peserta->Nama }}</h5>
-                    <h5 class="card-creator">By{{ $peserta->creator }}</h5>
+                    <h5 class="card-creator">By {{ $peserta->creator }}</h5>
                     <hr>
                     <p class="card-desc">{{ $peserta->desc}} </p>
                   </div>
