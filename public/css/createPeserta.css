@@ -10,32 +10,26 @@
 h2{
   color: var(--white) !important;
   text-align: center !important;
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.541);
+  /* border-bottom: 0.1rem solid rgba(255, 255, 255, 0.541); */
   /* border-height: 70%; */
 }
 #create-peserta-box{
-  background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.1) 100%);
   border-radius: 40px;
-  
-  
-}
-
-#create-peserta-box hr{
-border-width: 0;
-
+  stroke: white;
 }
 
 #formCreate{
   color: var(--white) !important;
   font-size: larger;
   width: 100%;
-}
-
-.form-box{
-  flex-direction: column;
   display: flex;
   align-items: center;
-  width: 100%;
+  flex-direction: column;
+}
+
+.input-box{
+  width: 85%;
 }
 .form-control , .form-select{
   color: var(--white) !important;
@@ -52,10 +46,9 @@ border-width: 0;
   font-size: 12pt;
   width: 65%;
   margin: 1.2rem 0 2rem 0;
-
 }
 
 #create-btn:hover{
-      background-color:#5753FF70 !important;
-      color: #ffffffec !important;
+  background-color:#5753FF70 !important;
+  color: #ffffffec !important;
 }

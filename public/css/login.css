@@ -1,5 +1,6 @@
 :root {
     --black: #1E1E1E;
+    --black-input: #1E1E1E80;
     --white: #FFFFFF;
     --purple: #8F46D9;
     --lavender: #5753FF;
@@ -63,9 +64,8 @@ nav {
 }
 
 #card-box{
-    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.1) 100%);
     border-radius: 40px;
-    
     stroke: #FFFFFF;
 }
 
@@ -85,5 +85,11 @@ nav {
     font-family: 'Plus Jakarta Text';
     font-weight: 700;
     
+}
+
+.form-control {
+    color: var(--white) !important;
+    background: var(--black-input) !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.25) !important;
 }
 
