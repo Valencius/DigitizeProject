@@ -154,7 +154,7 @@ h3 {
 
 /* Drawing Competition */
 
-.drawing-comp {
+.drawing-comp, .singing-comp {
     height:80vh !important;
     width: 100% !important;
     display: flex;
@@ -180,7 +180,7 @@ h2 {
     justify-content: end;
 }
 
-#drawing-heading {
+#drawing-heading, #singing-heading {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -190,10 +190,10 @@ h2 {
 .card-detail {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
-.card-body-drawing {
+.card-body-drawing, .card-body-singing {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -218,4 +218,31 @@ h4, h5 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#see-all-link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+/* Singing Competition */
+
+.card-singing {
+    width: 100%;
+    background-color: radial-gradient(127.68% 13497.49% at 1.6% 8.93%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0) 100%);
+    border-style: outset;
+    border-width: 1px;
+    border-color: var(--white);
+    border-radius: 18px;
+}
+
+audio {
+    padding: 0px 48px;
+}
+
+.list-home-singing {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
