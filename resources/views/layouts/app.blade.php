@@ -47,10 +47,10 @@
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/#coxmpetitionHeading">Competition</a>
+                        <a class="nav-link" href="/#competition-heading">Competition</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Timeline</a>
+                        <a class="nav-link" href="/#timeline-p">Timeline</a>
                         </li>
                     </ul>
 
