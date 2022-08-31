@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{asset('/css/register.css')}}">
     <link rel="stylesheet" href="{{asset('/css/admin.css')}}">
     <link rel="stylesheet" href="{{ asset('css/email.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/pesertaShow.css') }}">
     
     {{-- tambahin disini buat css lainnya --}}
     {{-- boleh liat home.css sama variables.scss dulu soalnya ada brp yg gw set default--}}
@@ -43,13 +44,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link active" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/#coxmpetitionHeading">Competition</a>
+                        <a class="nav-link" href="/#competition-heading">Competition</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Timeline</a>
+                        <a class="nav-link" href="/#timeline-p">Timeline</a>
                         </li>
                     </ul>
 
@@ -95,6 +96,33 @@
         <main class="py-4">
             @yield('content')
         </main>
+    </div>
+
+    <div class="footer">
+        <div class="content1">
+            <div class="content2">
+                <div class="content3">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="{{ asset('asset/logo.png')}}" width="175px" height="48px">
+                    </a>
+                    <a href="/#competition-heading" class="btn" id="letsvote">Let's Vote</a>
+                </div>
+                <div class="content4">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/" id="active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/#competition-heading" id="competition">Competition</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/#timeline-p" id="timeline">Timeline</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p>Copyright Digitize. All Rights Reserved</p>
+        </div>
     </div>
 </body>
 </html>
