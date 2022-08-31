@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --black: #1E1E1E;
   --black-input: #1E1E1E80;
   --white: #FFFFFF;
@@ -11,11 +11,11 @@ h1{
   font-size: xx-large !important;
 }
 
-h5{
+.card-title, .card-category, .card-creator{
   color: black !important;
 }
 
-p{
+.card-text {
   color: black !important;
 }
 
@@ -30,4 +30,4 @@ p{
 }
 .picture{
   opacity: 0%;
-}
+} */

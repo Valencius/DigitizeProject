@@ -77,7 +77,7 @@ nav {
     height:80vh !important;
 }
 
-h1 {
+.home h1 {
     font-size: 64pt !important;
     font-weight: 800 !important;
     text-align: center;
@@ -334,7 +334,7 @@ audio {
     justify-content: center;
 }
 
-video {
+.home video {
     padding: 24px 24px;
     width: 100%;
     height: auto;
