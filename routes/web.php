@@ -27,6 +27,13 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
 });
 
 // already login
+Route::prefix('peserta')->middleware(['auth'])->group(function(){
+    Route::post('/voteDrawing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDrawing'])->name('peserta.voteDrawing');
+Route::post('/voteSinging/{id}', [App\Http\Controllers\PesertaController::class, 'voteSinging'])->name('peserta.voteSinging');
+Route::post('/voteDancing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDancing'])->name('peserta.voteDancing');
+Route::get('/{id}', [App\Http\Controllers\PesertaController::class, 'show'])->name('peserta.show');
+
+});
 Route::post('/peserta/voteDrawing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDrawing'])->name('peserta.voteDrawing');
 Route::post('/peserta/voteSinging/{id}', [App\Http\Controllers\PesertaController::class, 'voteSinging'])->name('peserta.voteSinging');
 Route::post('/peserta/voteDancing/{id}', [App\Http\Controllers\PesertaController::class, 'voteDancing'])->name('peserta.voteDancing');
