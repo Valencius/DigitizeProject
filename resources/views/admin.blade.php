@@ -1,10 +1,11 @@
 @extends('layouts.app')
-
 @section('content')
+
 
 <h1 class="text-center mt-2">All Participant</h1>
 <hr>
 <br>
+
 
 
 <div class="container">
