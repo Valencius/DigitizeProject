@@ -13,9 +13,13 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="./css/home.css"> {{-- css home --}}
-    <link rel="stylesheet" href="./createPeserta.css"> {{-- css home --}}
+    <link rel="stylesheet" href="{{ asset('css/createPeserta.css') }}">
+    
     {{-- tambahin disini buat css lainnya --}}
     {{-- boleh liat home.css sama variables.scss dulu soalnya ada brp yg gw set default--}}
+
+    <!-- Favicon - buat icon di tab menu -->
+    <link rel="icon" href="{{ asset('asset/logo-black.svg') }}">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])

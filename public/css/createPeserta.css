@@ -1,0 +1,23 @@
+:root {
+  --black: #1E1E1E;
+  --white: #FFFFFF;
+  --purple: #8F46D9;
+  --lavender: #5753FF;
+  font-size: 18px;
+}
+
+h2{
+  color: var(--white) !important;
+  text-align: center !important;
+}
+#container-create{
+  background: gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%) !important;
+}
+
+#formCreate{
+  color: var(--white) !important;
+}
+
+.form-control , .form-select{
+  color: var(--white) !important;
+}
