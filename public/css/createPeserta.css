@@ -10,12 +10,14 @@ h2{
   color: var(--white) !important;
   text-align: center !important;
 }
-#container-create{
-  background: gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%) !important;
+.container-create{
+  background-color: #8F46D9 !important;
+  background-image: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 #formCreate{
   color: var(--white) !important;
+  font-size: large;
 }
 
 .form-control , .form-select{
