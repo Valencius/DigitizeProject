@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/home.css"> {{-- css home --}}
     <link rel="stylesheet" href="{{ asset('css/createPeserta.css') }}">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/register.css">
     
     {{-- tambahin disini buat css lainnya --}}
     {{-- boleh liat home.css sama variables.scss dulu soalnya ada brp yg gw set default--}}

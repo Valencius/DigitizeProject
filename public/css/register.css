@@ -1,6 +1,5 @@
 :root {
     --black: #1E1E1E;
-    --black-input: #1E1E1E80;
     --white: #FFFFFF;
     --purple: #8F46D9;
     --lavender: #5753FF;
@@ -58,15 +57,15 @@ nav {
 
 #submit-btn{
     background-color: var(--lavender);
-    font-weight: 500;
-    font-size: 12pt;
+    font-weight: 700;
+    font-size: 20px;
     border-radius: 10px;
 }
 
 #card-box{
     background: radial-gradient(99.53% 99.53% at 6.04% 9.12%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.1) 100%);
     border-radius: 40px;
-    stroke: #FFFFFF;
+    border: 1000px purple;
 }
 
 #card-header{
@@ -75,20 +74,11 @@ nav {
     font-size: 32px;
 }
 
-#email-title, #password-title{
+#name-title, #email-title, #password-title, #confirm-password-title {
     font-family: 'Plus Jakarta Text';
     font-weight: 700;
-    
 }
 
-#password-title{
-    font-family: 'Plus Jakarta Text';
-    font-weight: 700;
-    
-}
-
-.form-control {
-    color: var(--white) !important;
-    background: var(--black-input) !important;
-    border: 0.5px solid rgba(255, 255, 255, 0.25) !important;
+#forgot-link{
+    color: var(--lavender);
 }
