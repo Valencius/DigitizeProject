@@ -2,12 +2,12 @@
 
 @section('content')
 
-<div class="container mt-5 mb-5">
-
+<div class="container mt-5 mb-5" id="containerCreate" >
+  {{-- <div class="containerCreate"> --}}
     <h2>Create Peserta</h2>
     <hr>
 
-    <form action="{{ route('peserta.store') }}" enctype="multipart/form-data" method="POST">
+    <form action="{{ route('peserta.store') }}" enctype="multipart/form-data" method="POST" id="formCreate" >
         @csrf
 
         <div class="mb-3">
@@ -42,7 +42,7 @@
           <button type="submit" class="btn btn-primary">Create Peserta</button>
 
     </form>
-
+  {{-- </div> --}}
 </div>
 
 
